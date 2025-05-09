@@ -1,4 +1,3 @@
-'use client'
 import { createContext, useEffect, useContext, useMemo, useCallback } from 'react';
 // hooks
 import useLocalStorage from '~/hooks/useLocalStorage';

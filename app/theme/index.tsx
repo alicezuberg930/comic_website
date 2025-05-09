@@ -1,4 +1,3 @@
-'use client'
 import { useMemo } from 'react';
 // @mui
 import { CssBaseline } from '@mui/material';

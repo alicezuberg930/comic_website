@@ -1,4 +1,3 @@
-'use client'
 import merge from 'lodash/merge';
 import { useMemo } from 'react';
 // @mui

@@ -1,4 +1,3 @@
-'use client'
 import { format, getTime, formatDistanceToNow } from 'date-fns';
 
 // ----------------------------------------------------------------------
