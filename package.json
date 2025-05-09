@@ -1,0 +1,53 @@
+{
+  "name": "comic-web",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "build": "react-router build",
+    "dev": "react-router dev",
+    "start": "react-router-serve ./build/server/index.js",
+    "typecheck": "react-router typegen && tsc"
+  },
+  "dependencies": {
+    "@react-router/node": "^7.5.3",
+    "@react-router/serve": "^7.5.3",
+    "isbot": "^5.1.27",
+    "react": "^19.1.0",
+    "react-dom": "^19.1.0",
+    "react-router": "^7.5.3",
+    "@emotion/cache": "^11.14.0",
+    "@emotion/react": "^11.14.0",
+    "@emotion/styled": "^11.14.0",
+    "@iconify/react": "^5.2.1",
+    "@mui/lab": "^7.0.0-beta.11",
+    "@mui/material": "^7.0.2",
+    "@mui/system": "^7.0.2",
+    "@mui/x-data-grid": "^7.28.3",
+    "@mui/x-date-pickers": "^7.28.3",
+    "autosuggest-highlight": "^3.3.4",
+    "change-case": "^5.4.4",
+    "date-fns": "^4.1.0",
+    "dayjs": "^1.11.13",
+    "framer-motion": "^12.6.5",
+    "i18next-browser-languagedetector": "^8.0.4",
+    "lodash": "^4.17.21",
+    "notistack": "^3.0.2",
+    "react-i18next": "^15.4.1",
+    "react-lazy-load-image-component": "^1.6.3",
+    "simplebar-react": "^3.3.0"
+  },
+  "devDependencies": {
+    "@react-router/dev": "^7.5.3",
+    "@tailwindcss/vite": "^4.1.4",
+    "@types/node": "^20",
+    "@types/react": "^19.1.2",
+    "@types/react-dom": "^19.1.2",
+    "tailwindcss": "^4.1.4",
+    "typescript": "^5.8.3",
+    "vite": "^6.3.3",
+    "vite-tsconfig-paths": "^5.1.4",
+    "@types/autosuggest-highlight": "^3.2.3",
+    "@types/lodash": "^4.17.16",
+    "@types/react-lazy-load-image-component": "^1.6.4"
+  }
+}
