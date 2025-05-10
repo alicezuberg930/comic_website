@@ -42,7 +42,7 @@ export function Layout({ children }: { children: React.ReactNode }) {
         <Links />
       </head>
       <body>
-        <CustomLocalizationProvider>
+        {/* <CustomLocalizationProvider> */}
           <SettingsProvider>
             <MotionLazyContainer>
               <ThemeProvider>
@@ -56,7 +56,7 @@ export function Layout({ children }: { children: React.ReactNode }) {
               </ThemeProvider>
             </MotionLazyContainer>
           </SettingsProvider>
-        </CustomLocalizationProvider>
+        {/* </CustomLocalizationProvider> */}
         <ScrollRestoration />
         <Scripts />
       </body>
