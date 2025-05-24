@@ -1,5 +1,5 @@
 'use client'
-import { forwardRef } from 'react';
+import { forwardRef } from 'react'; 
 import * as pkg from 'react-lazy-load-image-component';
 const { LazyLoadImage } = pkg
 // @mui

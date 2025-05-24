@@ -1,3 +1,4 @@
+// @ts-ignore
 import { Props } from 'simplebar-react';
 // @mui
 import { Theme } from '@mui/material/styles';

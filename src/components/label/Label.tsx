@@ -1,3 +1,4 @@
+'use client'
 import { forwardRef } from 'react';
 // @mui
 import { useTheme } from '@mui/material/styles';
