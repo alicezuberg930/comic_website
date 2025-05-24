@@ -13,7 +13,7 @@ export default function Home() {
           </Typography>
           <Grid container>
             {_homeComics.map(comic => (
-              <Grid item xs={12} sm={6} md={3} pb={2} pr={2} key={comic.id}>
+              <Grid xs={12} sm={6} md={3} pb={2} pr={2} key={comic.id}>
                 <Card sx={{ p: 1 }}>
                   <Image src={comic.coverUrl} sx={{ borderRadius: 1 }} />
                   <Stack direction='row' justifyContent='space-between' my={1}>
