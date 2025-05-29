@@ -9,7 +9,7 @@ export default function ChatTest() {
 
     useEffect(() => {
         const newSocket = io('ws://127.0.0.1:4001', { withCredentials: true });
-        newSocket.on('connect', () => console.log('Connected'));
+        newSocket.on('connected', (data) => console.log(data));
         newSocket.on('onCreateChat', (chat) => setChats((prev) => [...prev, chat]));
         setSocket(newSocket);
         return () => { newSocket.disconnect() }
@@ -20,10 +20,12 @@ export default function ChatTest() {
             socket.emit('createChat', { test });
         }
     }
+
     const sendMessage = (e: FormEvent<HTMLFormElement>) => {
         e.preventDefault()
         sendMessageSocket(message)
     }
+
     return (
         <div>
             <form onSubmit={sendMessage}>

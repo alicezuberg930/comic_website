@@ -1,11 +1,17 @@
 import Image from "@/components/image";
-import { Box, Card, Container, Grid, Stack, Typography } from '@mui/material'
+import { Box, Button, Card, Container, Grid, Stack, Typography } from '@mui/material'
 import { _homeComics } from '@/_mock/arrays/_comic'
 import Label from "@/components/label";
+import Link from "next/link";
 
 export default function Home() {
   return (
     <Container maxWidth='xl'>
+      <Button>
+        <Link href={'/video'}>
+          Video
+        </Link>
+      </Button>
       <Stack direction='row' spacing={2}>
         <Stack flex={1} spacing={1}>
           <Typography variant="h6">
@@ -55,6 +61,7 @@ export default function Home() {
             ))}
           </Stack>
         </Stack>
+
       </Stack>
     </Container>
   );

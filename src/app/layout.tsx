@@ -8,6 +8,15 @@ import ThemeProvider from "@/theme/ThemeProvider";
 import ThemeLocalization from "@/locales";
 import SnackbarProvider from "@/components/snackbar";
 import HomeLayout from "@/layouts/home";
+import {
+  ClerkProvider,
+  SignInButton,
+  SignUpButton,
+  SignedIn,
+  SignedOut,
+  UserButton,
+} from '@clerk/nextjs'
+import { SocketProvider } from "@/components/socket/SocketProvider";
 
 const geistSans = localFont({
   src: "./fonts/GeistVF.woff",
@@ -33,25 +42,30 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={`${geistSans.variable} ${geistMono.variable}`}>
-        {/* <LocalizationProvider dateAdapter={AdapterDayjs}> */}
-        <CustomI18nextProvider>
-          <SettingsProvider>
-            <MotionLazyContainer>
-              <ThemeProvider>
-                <ThemeSettings>
-                  <ThemeLocalization>
-                    <SnackbarProvider>
-                      <HomeLayout>
-                        {children}
-                      </HomeLayout>
-                    </SnackbarProvider>
-                  </ThemeLocalization>
-                </ThemeSettings>
-              </ThemeProvider>
-            </MotionLazyContainer>
-          </SettingsProvider>
-        </CustomI18nextProvider>
-        {/* </LocalizationProvider> */}
+        <ClerkProvider>
+          <SocketProvider>
+            {/* <LocalizationProvider dateAdapter={AdapterDayjs}> */}
+            <CustomI18nextProvider>
+              <SettingsProvider>
+                <MotionLazyContainer>
+                  <ThemeProvider>
+                    <ThemeSettings>
+                      <ThemeLocalization>
+                        <SnackbarProvider>
+                          {/* <HomeLayout> */}
+                          {children}
+                          {/* </HomeLayout> */}
+                        </SnackbarProvider>
+                      </ThemeLocalization>
+                    </ThemeSettings>
+                  </ThemeProvider>
+                </MotionLazyContainer>
+              </SettingsProvider>
+            </CustomI18nextProvider>
+            {/* </LocalizationProvider> */}
+          </SocketProvider>
+        </ClerkProvider>
+
       </body>
     </html>
   );
